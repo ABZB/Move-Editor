@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Move-Editor", "Move-Editor.pyproj", "{73CC8D73-D14A-4FC0-9E1C-DCE0B2ADA038}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73CC8D73-D14A-4FC0-9E1C-DCE0B2ADA038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73CC8D73-D14A-4FC0-9E1C-DCE0B2ADA038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F97EB33-FBB8-4397-8980-8F97D17DEE76}
+	EndGlobalSection
+EndGlobal
