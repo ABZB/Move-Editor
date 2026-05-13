@@ -3,9 +3,16 @@ import pathlib
 
 
 #read input bytestring as little-endian, return integer
-def from_little_bytes_int(byte_input):
+def from_little_bytes_int(byte_input, length = 0, start = 0):
     temp = 0
-    for x, byte in enumerate(byte_input):
+    temp_bytes = []
+    if(length == 0):
+        temp_bytes = byte_input
+    else:
+        temp_bytes = byte_input[start:start + length]
+
+
+    for x, byte in enumerate(temp_bytes):
         temp += byte << (x*8)
     return(temp)
 
