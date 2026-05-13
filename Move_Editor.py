@@ -26,8 +26,7 @@ def export_tmhmtutor(move_edit_data, move_list, pokemon_list):
                 if(temp > len(move_list) or temp == 0):
                     break
                 else:
-                    tutor_compat_table.append()
-
+                    tutor_compat_table.append(temp)
         #add first 107
         f.seek(0x004BB98E,0)
         for x in range(107):
@@ -79,7 +78,7 @@ def export_tmhmtutor(move_edit_data, move_list, pokemon_list):
                     temp_row.append(1)
 
             #do regular tutors
-            for x in range(min(128,len(tmhm_compat_table))):
+            for x in range(min(128,len(tutor_compat_table))):
                 if(file[0x3C + (x>>3)] & (1 << (x%8)) == 0):
                     temp_row.append('')
                 else:
@@ -93,9 +92,8 @@ def export_tmhmtutor(move_edit_data, move_list, pokemon_list):
                         temp_row.append(1)
 
             #do special tutors
-            temp_byte = file[0x38]
             for x in range(8):
-                if(temp_byte & (1 << x) == 0):
+                if(file[0x38] & (1 << x) == 0):
                     temp_row.append('')
                 else:
                     temp_row.append(1)
